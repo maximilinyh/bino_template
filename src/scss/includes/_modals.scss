@@ -1,0 +1,289 @@
+//site-popup container size
+.site-popup {
+	position: relative;
+	background: #fff;
+	width: auto;
+	margin: 20px auto;
+	@include transition-1;
+	border-radius: 10px;
+	box-sizing: border-box;
+
+	//big size
+	&-big {
+		max-width: 920px;
+		padding: 60px 120px 70px 120px;
+
+		@include media('<tab') {
+			max-width: 640px;
+			padding: 60px 60px 21px 60px;
+		}
+
+		.site-popup-content {
+			text-align: center;
+
+		}
+
+		.mfp-close {
+			right: 20px;
+			top: 20px;
+
+			@include media('<tab') {
+				right: 10px;
+				top: 10px;
+			}
+		}
+	}
+
+	//middle size
+	&-middle {
+		max-width: 760px;
+		padding: 60px 120px 70px 120px;
+
+		@include media('<tab') {
+			max-width: 640px;
+		}
+
+
+		@include media('<mobile') {
+			padding: 60px 20px 40px 20px;
+		}
+
+
+		.site-popup-content {
+			text-align: left;
+		}
+
+		.mfp-close {
+			right: 20px;
+			top: 20px;
+
+			@include media('<tab') {
+				right: 10px;
+				top: 10px;
+			}
+		}
+
+	}
+
+	//small size
+	&-small {
+		max-width: 520px;
+		min-height: 287px;
+		padding: 60px 40px 70px 40px;
+
+		@include media('<tab') {
+			padding: 60px;
+		}
+
+		@include media('<mobile') {
+			padding: 60px 20px 40px 20px;
+		}
+
+		.popup-title {
+			margin-bottom: 20px;
+
+			@include media('<mobile') {
+				margin-bottom: 30px;
+			}
+		}
+
+		.mfp-close {
+			right: 20px;
+			top: 20px;
+
+			@include media('<tab') {
+				right: 10px;
+				top: 10px;
+			}
+		}
+
+	}
+}
+
+
+
+//popup content
+.site-popup-content {
+	position: relative;
+	z-index: 1;
+}
+
+//popup title
+.popup-title {
+	font-family: $basic-font-family;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 28px;
+	line-height: 120%;
+	margin-bottom: 30px;
+}
+
+
+
+
+.mfp-bg {
+	background: #000;
+}
+
+.mfp-fade.mfp-bg {
+	opacity: 0;
+	@include transition-1;
+}
+
+
+/* overlay animate in */
+
+.mfp-fade.mfp-bg.mfp-ready {
+	opacity: 0.4;
+}
+
+
+/* overlay animate out */
+
+.mfp-fade.mfp-bg.mfp-removing {
+	opacity: 0;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+	opacity: 0;
+	transition: all 0.4s ease-out;
+}
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+	opacity: 1;
+}
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+	opacity: 0;
+}
+
+
+.mfp-close {
+	font-size: 52px;
+	font-weight: 200;
+	font-family: $basic-font-family;
+	right: 40px;
+	top: 30px;
+
+	@include media('<tab') {
+		right: 5px;
+		top: 5px;
+
+	}
+}
+
+.mfp-figure:after {
+	box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.mfp-arrow-left,
+.mfp-arrow-right {
+	&:hover {
+		&:before {
+			background-color: $fir-blue;
+
+		}
+	}
+}
+
+.mfp-arrow-left {
+	&:before {
+		width: 40px;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		background-color: $fir-blue;
+		@include transition-1;
+		border-right: none;
+		margin: 0;
+
+	}
+
+	&:after {
+		position: absolute;
+		content: '';
+		border: 5.5px solid transparent;
+		border-right: 7.5px solid #F6F0EC;
+		left: 4px;
+		top: 15px;
+	}
+}
+
+
+.mfp-arrow-right {
+	&:before {
+		width: 40px;
+		background-color: $fir-blue;
+		@include transition-1;
+		border-left: none;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		margin: 0;
+
+	}
+
+	&:after {
+		position: absolute;
+		content: '';
+		border: 5.5px solid transparent;
+		border-left: 7.5px solid #F6F0EC;
+		left: 4px;
+		top: 15px;
+	}
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+	opacity: 1;
+}
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+	opacity: 0.6;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
+//animate change slide
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.mfp-open .mfp-figure {
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	backface-visibility: hidden;
+
+}
+
+figcaption {
+	.mfp-bottom-bar {
+		padding: 20px;
+		box-sizing: border-box;
+		background-image: linear-gradient(-50deg, #00a3e5 0%, #57c5f2 98%, #57c5f2 100%);
+		color: #fff;
+		margin-top: -40px;
+	}
+
+	.mfp-counter {
+		color: #fff;
+		position: relative;
+		text-align: right;
+	}
+
+}

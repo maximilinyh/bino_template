@@ -1,0 +1,79 @@
+.contact {
+  padding: 150px 0;
+  background-color: $light;
+  @include media("<tab") {
+    padding: 75px 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: space-between;
+
+    @include media("<mobile") {
+      display: block;
+    }
+  }
+
+  &__address,
+  &__feedback {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding: 100px 90px;
+    @include media("<tab") {
+      padding: 50px 45px;
+    }
+  }
+
+  &__address {
+    width: calc((478 / 1170) * 100%);
+    @include media("<mobile") {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__feedback {
+    width: calc((665 / 1170) * 100%);
+    @include media("<mobile") {
+      width: 100%;
+    }
+  }
+
+  &-address {
+    &__section {
+      margin-bottom: 70px;
+      @include media("<tab") {
+        margin-bottom: 35px;
+      }
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+
+    &__title {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 24px;
+      text-transform: uppercase;
+      color: $red;
+      margin-bottom: 24px;
+    }
+
+    &__text {
+      font-size: 18px;
+      font-weight: 400;
+      font-family: $second-font-family;
+
+      a {
+        color: $main;
+
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+}

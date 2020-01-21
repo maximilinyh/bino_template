@@ -1,0 +1,51 @@
+//contact
+.contact
+	.page-frame
+		.section-head
+			h3.section-head__title.section-title-medium
+				span keep in touch
+			.section-head__text.decorate-text-border.decorate-text-border--white
+				span Nullam sit amet odio eu est aliquet euismod a a urna. Proin eu urna suscipit, dictum quam nec.
+
+	.contact__body
+		.page-frame
+			.contact__inner
+				.contact__address.contact-address
+					.contact-address__section
+						.contact-address__title
+							span our address
+						.contact-address__text
+							span House #13, Streat road, Sydney 2310 Australia
+					.contact-address__section
+						.contact-address__title
+							span call us
+						.contact-address__text
+							p
+								a(href="tel:+8801681091425" alt="" title="") + 880 168 109 1425
+							p
+								a(href="tel:+0216809142" alt="" title="") + 0216809142
+					.contact-address__section
+						.contact-address__title
+							span email us
+						.contact-address__text
+							p
+								a(href="mailto:contactus@email.com" alt="" title="") contactus@email.com
+				.contact__feedback.contact-feedback
+					form(action="#").contact-feedback__form.form
+						.form__fields
+							.form__group
+								.form__input-wrap
+									input.form__input(type="text" name="name" placeholder="Name*" required="" autocomplete="off")
+							.form__group
+								.form__input-wrap
+									input.form__input(type="text" name="email" placeholder="Email*" required="" autocomplete="off")
+							.form__group
+								.form__input-wrap
+									input.form__input(type="text" name="subject" placeholder="Subject*" required="" autocomplete="off")
+							.form__group
+								.form__input-wrap
+									textarea.form__textarea(type="text" name="message" placeholder="Message" autocomplete="off")
+						.form__submit.form-submit
+							button.form-submit__button.site-button.site-button--min.site-button--red(type="submit")
+								span send message
+//end contact

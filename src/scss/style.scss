@@ -1,0 +1,77 @@
+//plugins
+//normalize css include
+@import "../../node_modules/normalize.css/normalize.css";
+
+//fonts
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900,900i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+
+//font-awesome
+@import "~font-awesome/scss/font-awesome";
+
+//magnific-popup include
+//@import "magnific-popup";
+
+//swiper css include
+@import "../../node_modules/swiper/css/swiper.css";
+
+//swiper css include
+@import "../../node_modules/priority-nav/dist/priority-nav-core.css";
+
+//include media scss include
+@import "../../node_modules/include-media/dist/include-media";
+
+//components templates scss
+//var style include
+@import "includes/var";
+//mixins style include
+@import "includes/mixins";
+
+//common style include
+@import "includes/common";
+
+//common style include
+@import "includes/sprite";
+@import "includes/grid";
+@import "includes/footer";
+@import "includes/modals";
+@import "includes/slider";
+
+//top-block
+@import "includes/top-block";
+
+//benefits
+@import "includes/benefits";
+
+//history
+@import "includes/history";
+
+//services
+@import "includes/services";
+
+//works
+@import "includes/works";
+
+//study
+@import "includes/study";
+
+//stats
+@import "includes/stats";
+
+//price
+@import "includes/price";
+
+//team
+@import "includes/team";
+
+//clients
+@import "includes/clients";
+
+//clients
+@import "includes/blog";
+
+//contact
+@import "includes/contact";
+
+//ux elements
+@import "includes/ux-elements";

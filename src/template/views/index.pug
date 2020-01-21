@@ -1,0 +1,42 @@
+doctype html
+html
+	head
+		title Main page
+		meta(charset="UTF-8")
+		meta(name="description" content="")
+		meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+		meta(property='og:title', content='')
+		meta(property='og:description', content='')
+		meta(property='og:url', content='')
+		meta(property='og:type', content='website')
+		meta(property='og:image', content='')
+		link(rel="shortcut icon" type="image/png" href="")
+
+	body
+		include ../includes/mixins.pug
+		div.wrapper
+			//main content
+			main.main-content
+				section.section.home#home
+					include ../includes/top-block.pug
+				section.section#about
+					include ../includes/benefits.pug
+					include ../includes/history.pug
+					include ../includes/services.pug
+				section.section#portfolio
+					include ../includes/works.pug
+					include ../includes/study.pug
+					include ../includes/stats.pug
+				section.section#pricing
+					include ../includes/price.pug
+				section.section#team
+					include ../includes/team.pug
+					include ../includes/clients.pug
+				section.section#blog
+					include ../includes/blog.pug
+				section.section#contact
+					include ../includes/contact.pug
+				//end main content
+			include ../includes/footer.pug
+
+

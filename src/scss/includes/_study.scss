@@ -1,0 +1,103 @@
+.study {
+  background-color: $light;
+  padding: 150px 0;
+
+  @include media("<tab") {
+    padding: 70px 0;
+  }
+
+  &-frame {
+    height: 722px;
+    background-image: url(../img/content/study_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 585px auto;
+    background-position: right;
+    position: relative;
+    display: flex;
+    flex: 0 1 100%;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include media("<mobile") {
+      background-image: none;
+    }
+  }
+
+  &-slider {
+    &-list {
+      &-item {
+        overflow: hidden;
+        padding-bottom: 53px;
+        text-align: center;
+      }
+    }
+
+    &-wrapper {
+      background-color: #fff;
+      box-sizing: border-box;
+      padding: 80px 60px 50px 60px;
+      max-width: 665px;
+      flex: 0 1 100%;
+      min-height: 629px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      @include media("<mobile") {
+        max-width: 100%;
+        padding: 40px 30px;
+      }
+    }
+
+    &-pagination {
+      display: flex;
+      flex: 0 1 auto;
+      justify-content: center;
+    }
+  }
+
+  &__icon {
+    width: 90px;
+    height: 90px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    margin: 18px auto 60px auto;
+
+    &:after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $red;
+      z-index: -1;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__title {
+    color: $dark;
+    font-family: $second-font-family;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.35px;
+    position: relative;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    &:after {
+      position: absolute;
+      content: "";
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      width: 41px;
+      height: 2px;
+      background-color: $dark;
+    }
+  }
+
+  &__text {
+    margin-bottom: 48px;
+  }
+}

@@ -1,0 +1,42 @@
+.history {
+  padding-top: 140px;
+  padding-bottom: 150px;
+
+  @include media("<tab") {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &__inner {
+    display: flex;
+    flex: 0 1 auto;
+
+    @include media("<tab") {
+      display: block;
+    }
+  }
+
+  &__left {
+    width: calc((506 / 1170) * 100%);
+    margin-right: 77px;
+
+    @include media("<tab") {
+      margin: 0 auto 30px auto;
+      max-width: 505px;
+    }
+  }
+
+  &__right {
+    width: calc((582 / 1170) * 100%);
+
+    @include media("<tab") {
+      width: 100%;
+    }
+  }
+
+  &-content {
+    &__title {
+      margin-bottom: 54px;
+    }
+  }
+}
