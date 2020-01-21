@@ -4,6 +4,21 @@ import smoothscroll from "smoothscroll-polyfill";
 // kick off the polyfill!
 smoothscroll.polyfill();
 
+//flexmenu plugin import and init
+import priorityNav from "priority-nav";
+priorityNav.init({
+  initClass: "js-flexMenu",
+  mainNavWrapper: "nav",
+  mainNav: "ul",
+  navDropdownClassName: "nav__dropdown",
+  navDropdownToggleClassName: "nav__dropdown-toggle",
+  navDropdownLabel: "more",
+  navDropdownBreakpointLabel: "menu",
+  breakPoint: 500,
+  throttleDelay: 50,
+  offsetPixels: 0,
+  count: true
+});
 
 //fixed header fn
 const fixedHeader = () => {
@@ -90,10 +105,10 @@ const animateScroll = () => {
       let id = item.getAttribute("href"),
         section = document.querySelectorAll(id),
         fromTop = section[0].offsetTop - headerHeight;
-            window.scrollTo({
-              top: fromTop,
-              behavior: "smooth"
-            });
+      window.scrollTo({
+        top: fromTop,
+        behavior: "smooth"
+      });
     });
   });
 };

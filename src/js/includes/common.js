@@ -73,22 +73,6 @@ $(function() {
   }
 });
 
-//flexmenu plugin import and init
-import priorityNav from "priority-nav";
-priorityNav.init({
-  initClass: "js-flexMenu",
-  mainNavWrapper: "nav",
-  mainNav: "ul",
-  navDropdownClassName: "nav__dropdown",
-  navDropdownToggleClassName: "nav__dropdown-toggle",
-  navDropdownLabel: "more",
-  navDropdownBreakpointLabel: "menu",
-  breakPoint: 500,
-  throttleDelay: 50,
-  offsetPixels: 0,
-  count: true
-});
-
 //	equalizer plugin for height equal item
 function equalizeHeight() {
   let equalItem = $(".equal");
