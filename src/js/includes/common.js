@@ -44,35 +44,6 @@ function svgInline() {
 }
 svgInline();
 
-//events in breakpoints change text in buttons
-$(function() {
-  let resizeTimer,
-    initialSize = $(window).innerWidth();
-  //onload
-  function mediaSize() {
-    /* Set the matchMedia */
-    //960px
-    if (window.matchMedia("(max-width: 960px)").matches) {
-    } else {
-    }
-  }
-
-  /* Call the function */
-  mediaSize();
-
-  /* Attach the function to the resize event listener */
-
-  let resizeId;
-  window.addEventListener("resize", function() {
-    clearTimeout(resizeId);
-    resizeId = setTimeout(doneResizing, 100);
-  });
-
-  function doneResizing() {
-    mediaSize();
-  }
-});
-
 //	equalizer plugin for height equal item
 function equalizeHeight() {
   let equalItem = $(".equal");

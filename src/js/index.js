@@ -15,6 +15,7 @@ import inputmask from "inputmask";
 //import flexMenu from "flexmenu";
 
 //components js include
+import "./includes/matchMedia.js";
 import "./includes/common.js";
 import "./includes/slider.js";
 import "./includes/header.js";

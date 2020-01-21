@@ -1,4 +1,4 @@
-//sliders js
+//slider js import
 import Swiper from "swiper";
 
 //slider top init
@@ -51,7 +51,7 @@ const sliderServices = () => {
   }
 
   //update sliders on load and resize
- window.addEventListener("resize", ()=> {
+  window.addEventListener("resize", () => {
     if ($(".services-content-slider")[0]) {
       setTimeout(function() {
         swiper1.update();
@@ -76,7 +76,6 @@ const sliderStudy = () => {
     }
   });
 };
-
 
 //all sliders init
 const slidersInit = () => {

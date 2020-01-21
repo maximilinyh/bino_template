@@ -4,23 +4,23 @@ import smoothscroll from "smoothscroll-polyfill";
 // kick off the polyfill!
 smoothscroll.polyfill();
 
-//flexmenu plugin import and init
+//flexmenu plugin import
 import priorityNav from "priority-nav";
-priorityNav.init({
-  initClass: "js-flexMenu",
-  mainNavWrapper: "nav",
-  mainNav: "ul",
-  navDropdownClassName: "nav__dropdown",
-  navDropdownToggleClassName: "nav__dropdown-toggle",
-  navDropdownLabel: "more",
-  navDropdownBreakpointLabel: "menu",
-  breakPoint: 500,
-  throttleDelay: 50,
-  offsetPixels: 0,
-  count: true
-});
 
-//fixed header fn
+//flexmenu plugin function
+const flexMenuInit = () => {
+  priorityNav.init({
+    initClass: "js-flexMenu",
+    breakPoint: 769,
+    navDropdownBreakpointLabel: "menu"
+  });
+};
+
+flexMenuInit();
+
+//end flexmenu
+
+//fixed header function
 const fixedHeader = () => {
   let header = document.querySelector(".js-fixed-header"),
     headerWrap = header.parentElement,
@@ -37,12 +37,11 @@ const fixedHeader = () => {
   }
 };
 
-//nav scroll spy
+//nav scroll spy function
 const scrollSpy = () => {
   let header = document.querySelector(".js-fixed-header"),
-    navList = header.querySelector("ul.nav-list"),
     headerHeight = header.offsetHeight - 30,
-    navLinks = navList.getElementsByTagName("a"),
+    navLinks = header.querySelectorAll("a.nav__link"),
     navLinksArr = [...navLinks],
     scrollItems = navLinksArr.map(item => {
       let itemHref = item.getAttribute("href");
@@ -85,15 +84,16 @@ const scrollSpy = () => {
   }
 };
 
+//scroll events
 window.addEventListener("scroll", function() {
   fixedHeader();
   scrollSpy();
 });
 
-//animate scroll
+//animate scroll function
 const animateScroll = () => {
   let header = document.querySelector(".js-fixed-header"),
-    navList = header.querySelector("ul.nav-list"),
+    navList = header.querySelector("ul.nav__list"),
     headerHeight = header.offsetHeight - 30,
     navLinks = navList.getElementsByTagName("a"),
     navLinksArr = [...navLinks],

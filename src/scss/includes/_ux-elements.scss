@@ -337,52 +337,6 @@ a.link-content {
   }
 }
 
-.nav__dropdown-toggle {
-  font-size: 14px;
-  font-weight: 400;
-  position: relative;
-  color: #fff;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.priority-nav__dropdown {
-  width: 0px;
-  opacity: 0;
-  transition: opacity 0.3s linear, width 0.3s linear;
-  padding: 0;
-  margin: 0;
-  right: 0;
-  overflow: hidden;
-
-  > .nav-list__item {
-    margin-right: 0px;
-    a {
-      display: block;
-      padding: 15px 10px;
-    }
-  }
-
-  &.show {
-    top: 40px;
-    opacity: 1;
-    width: 200px;
-    transition: opacity 0.3s linear, width 0.3s ease;
-    background-color: #000;
-  }
-}
-
-.priority-nav-is-visible.is-open {
-  &:before {
-    position: absolute;
-    content: "";
-    border: 10px solid transparent;
-    border-bottom: 10px solid #000;
-    bottom: -20px;
-    right: 20px;
-  }
-}
-
 //radiobutton style
 .radiobutton-group {
   [type="radio"]:checked,
