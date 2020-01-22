@@ -51,6 +51,11 @@
         height: 320px;
       }
 
+      @include media("<xsmall") {
+        width: 100%;
+        height: 320px;
+      }
+
       &:hover {
         .works-list-item-detail {
           transform: translateX(0);
