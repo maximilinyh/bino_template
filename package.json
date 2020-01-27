@@ -52,6 +52,7 @@
 	},
 	"dependencies": {
 		"font-awesome": "^4.7.0",
+		"imask": "^6.0.1",
 		"include-media": "^1.4.9",
 		"inputmask": "^5.0.0",
 		"isotope-layout": "^3.0.6",

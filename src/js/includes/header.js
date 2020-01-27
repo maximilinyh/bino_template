@@ -24,7 +24,6 @@ flexMenuInit();
 const mobileMenuAnimation = () => {
 	let nav = document.querySelector('.priority-nav'),
 		links = nav.querySelectorAll('.nav__link'),
-		linksArr = [...links],
 		logo = document.querySelector('.logo'),
 		burger = document.querySelector('.priority-nav__dropdown-toggle'),
 		burgerClass = burger.classList,
@@ -34,7 +33,7 @@ const mobileMenuAnimation = () => {
 	function animationLogoAndItems() {
 		if (burgerClass.contains('is-open')) {
 			logo.classList.add('fixed');
-			linksArr.map((item, index) => {
+			links.forEach((item, index) => {
 				setTimeout(() => {
 					item.classList.add('delay')
 				}, 100 * index);
@@ -42,7 +41,7 @@ const mobileMenuAnimation = () => {
 		} else {
 			logo.classList.remove('fixed');
 
-			linksArr.map((item, index) => {
+			links.forEach((item, index) => {
 				item.classList.remove('delay')
 			})
 		}
@@ -53,7 +52,7 @@ const mobileMenuAnimation = () => {
 			logo.classList.remove('fixed');
 			burger.classList.remove('is-open');
 			dropDown.classList.remove('show');
-			linksArr.map((item, index) => {
+			links.forEach((item, index) => {
 				item.classList.remove('delay')
 			})
 		}
@@ -61,7 +60,7 @@ const mobileMenuAnimation = () => {
 	}
 	//events
 	burger.addEventListener('click', animationLogoAndItems)
-	linksArr.forEach((item) => {
+	links.forEach((item) => {
 		item.addEventListener('click', clickLinks);
 	})
 

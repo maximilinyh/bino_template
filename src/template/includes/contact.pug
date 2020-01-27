@@ -31,20 +31,26 @@
 							p
 								a(href="mailto:contactus@email.com" alt="" title="") contactus@email.com
 				.contact__feedback.contact-feedback
-					form(action="#").contact-feedback__form.form
+					form(action="#").contact-feedback__form.js-validate
 						.form__fields
 							.form__group
 								.form__input-wrap
-									input.form__input(type="text" name="name" placeholder="Name*" required="" autocomplete="off")
+									input.form__input(type="text" name="name" placeholder="Name*" data-validate="true" autocomplete="off" id="name")
 							.form__group
 								.form__input-wrap
-									input.form__input(type="text" name="email" placeholder="Email*" required="" autocomplete="off")
+									input.form__input(type="text" name="email" placeholder="Email*" data-validate="true" autocomplete="off" id="email")
 							.form__group
 								.form__input-wrap
-									input.form__input(type="text" name="subject" placeholder="Subject*" required="" autocomplete="off")
+									input.form__input(type="text" name="telephone" placeholder="+7 (000) 000-00-00*" data-validate="true" autocomplete="off" id="phone")
 							.form__group
 								.form__input-wrap
-									textarea.form__textarea(type="text" name="message" placeholder="Message" autocomplete="off")
+									input.form__input(type="text" name="adress" placeholder="Adress*" data-validate="true" autocomplete="off" id="adress")
+							.form__group
+								.form__input-wrap
+									input.form__input(type="text" name="subject" placeholder="Subject*" data-validate="true" autocomplete="off" id="subject")
+							.form__group
+								.form__input-wrap
+									textarea.form__input.form__textarea(type="text" name="message" placeholder="Message" data-validate="false" autocomplete="off" id="message")
 						.form__submit.form-submit
 							button.form-submit__button.site-button.site-button--min.site-button--red(type="submit")
 								span send message

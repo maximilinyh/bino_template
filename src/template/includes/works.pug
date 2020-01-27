@@ -2,85 +2,68 @@
 .works
 	.page-frame
 		.section-head
-			h3.section-head__title.section-title-medium
-				span recent works
+			h3.section-head__title.section-title-medium recent works
 			.section-head__text.decorate-text-border.decorate-text-border--grey
 				span It has survived not only five centuries, but also the leap scrambled it to make a type.
 		.section-tags
-			ul.section-tags__list.js-tags#works-filter
+			ul.section-tags__list.js-tags#filter-tags
 				li(data-filter="*").active
-					a(href="" alt="" title="") all
+					a(href="" title="") all
 				li(data-filter=".print-design")
-					a(href="" alt="" title="") print design
+					a(href="" title="") print design
 				li(data-filter=".animation")
-					a(href="" alt="" title="") animation
+					a(href="" title="") animation
 				li(data-filter=".art")
-					a(href="" alt="" title="") art
+					a(href="" title="") art
 				li(data-filter=".web-design")
-					a(href="" alt="" title="") web design
+					a(href="" title="") web design
 				li(data-filter=".photography")
-					a(href="" alt="" title="") photography
+					a(href="" title="") photography
 				li(data-filter=".video")
-					a(href="" alt="" title="") video
-	.works__list.works-list
-		.works-list__item.works-list-item.print-design(style="background-image: url('./img/content/portfolio-1.jpg')")
-			a(href="" alt="" title="").works-list-item__link
-			.works-list-item__detail.works-list-item-detail
-				.works-list-item-detail__title
-					span t-shirt design
-				.works-list-item-detail__category
-					span art / t-shirt
+					a(href="" title="") video
 
-		.works-list__item.works-list-item.animation.photography(style="background-image: url('./img/content/portfolio-2.jpg')")
-			a(href="" alt="" title="").works-list-item__link
-			.works-list-item__detail.works-list-item-detail
-				.works-list-item-detail__title
-					span t-shirt design
-				.works-list-item-detail__category
-					span art / t-shirt
-		.works-list__item.works-list-item.art.photography.web-design(style="background-image: url('./img/content/portfolio-3.jpg')")
-			a(href="" alt="" title="").works-list-item__link
-			.works-list-item__detail.works-list-item-detail
-				.works-list-item-detail__title
-					span t-shirt design
-				.works-list-item-detail__category
-					span art / t-shirt
-		.works-list__item.works-list-item.web-design(style="background-image: url('./img/content/portfolio-4.jpg')")
-			a(href="" alt="" title="").works-list-item__link
-			.works-list-item__detail.works-list-item-detail
-				.works-list-item-detail__title
-					span t-shirt design
-				.works-list-item-detail__category
-					span art / t-shirt
-		.works-list__item.works-list-item.photography(style="background-image: url('./img/content/portfolio-5.jpg')")
-			a(href="" alt="" title="").works-list-item__link
-			.works-list-item__detail.works-list-item-detail
-				.works-list-item-detail__title
-					span t-shirt design
-				.works-list-item-detail__category
-					span art / t-shirt
-		.works-list__item.works-list-item.video(style="background-image: url('./img/content/portfolio-6.jpg')" )
-			a(href="" alt="" title="").works-list-item__link
-			.works-list-item__detail.works-list-item-detail
-				.works-list-item-detail__title
-					span t-shirt design
-				.works-list-item-detail__category
-					span art / t-shirt
-		.works-list__item.works-list-item.web-design(style="background-image: url('./img/content/portfolio-7.jpg')" )
-			a(href="" alt="" title="").works-list-item__link
-			.works-list-item__detail.works-list-item-detail
-				.works-list-item-detail__title
-					span t-shirt design
-				.works-list-item-detail__category
-					span art / t-shirt
-		.works-list__item.works-list-item.photography(style="background-image: url('./img/content/portfolio-8.jpg')" )
-			a(href="" alt="" title="").works-list-item__link
-			.works-list-item__detail.works-list-item-detail
-				.works-list-item-detail__title
-					span t-shirt design
-				.works-list-item-detail__category
-					span art / t-shirt
+	.works__list.filter-list
+		.works__item.filter__item.print-design.art.print-design(style="background-image: url('./img/content/portfolio-1.jpg')")
+			a(href="" title="").works__link
+			.works__detail.works-detail
+				.works-detail__title t-shirt design
+				.works-detail__category art / t-shirt
+		.works__item.filter__item.photography(style="background-image: url('./img/content/portfolio-2.jpg')")
+			a(href="" title="").works__link
+			.works__detail.works-detail
+				.works-detail__title t-shirt design
+				.works-detail__category art / t-shirt
 
+		.works__item.filter__item.animation.art(style="background-image: url('./img/content/portfolio-3.jpg')")
+			a(href="" title="").works__link
+			.works__detail.works-detail
+				.works-detail__title t-shirt design
+				.works-detail__category art / t-shirt
+		.works__item.filter__item.web-design.print-design(style="background-image: url('./img/content/portfolio-4.jpg')")
+			a(href="" title="").works__link
+			.works__detail.works-detail
+				.works-detail__title t-shirt design
+				.works-detail__category art / t-shirt
+		.works__item.filter__item.photography.art(style="background-image: url('./img/content/portfolio-5.jpg')")
+			a(href="" title="").works__link
+			.works__detail.works-detail
+				.works-detail__title t-shirt design
+				.works-detail__category art / t-shirt
+		.works__item.filter__item.video(style="background-image: url('./img/content/portfolio-6.jpg')")
+			a(href="" title="").works__link
+			.works__detail.works-detail
+				.works-detail__title t-shirt design
+				.works-detail__category art / t-shirt
 
+		.works__item.filter__item.animation(style="background-image: url('./img/content/portfolio-7.jpg')")
+			a(href="" title="").works__link
+			.works__detail.works-detail
+				.works-detail__title t-shirt design
+				.works-detail__category art / t-shirt
+		.works__item.filter__item.photography(style="background-image: url('./img/content/portfolio-8.jpg')")
+			a(href="" title="").works__link
+			.works__detail.works-detail
+				.works-detail__title t-shirt design
+				.works-detail__category art / t-shirt
 
 //end works

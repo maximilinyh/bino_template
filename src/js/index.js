@@ -23,4 +23,5 @@ import "./includes/footer.js";
 import "./includes/price.js";
 import "./includes/works.js";
 import "./includes/ux.js";
-import "./includes/modals.js";
+import "./includes/validation.js";
+//import "./includes/modals.js";

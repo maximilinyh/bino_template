@@ -1,3 +1,4 @@
+//stats styles
 .stats {
   min-height: 511px;
   background-size: cover;
@@ -49,27 +50,24 @@
       margin-bottom: 30px;
     }
   }
+  &__content {
+    color: #fff;
+    text-align: center;
+  }
 
-  &-item {
-    &__content {
-      color: #fff;
-      text-align: center;
-    }
+  &__icon {
+    width: 111px;
+    height: 111px;
+    border: 1px #fff solid;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100px;
+    margin: 0 auto 50px auto;
+  }
 
-    &__icon {
-      width: 111px;
-      height: 111px;
-      border: 1px #fff solid;
-      background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 100px;
-      margin: 0 auto 50px auto;
-    }
-
-    &__count {
-      font-size: 30px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-    }
+  &__count {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
   }
 }

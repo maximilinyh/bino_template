@@ -1,3 +1,4 @@
+//blog styles
 .blog {
   padding-top: 140px;
   background-color: $light;
@@ -72,6 +73,10 @@
         position: relative;
         padding-bottom: 20px;
         margin-bottom: 50px;
+
+        @include media("<mobile") {
+          margin-bottom: 25px;
+        }
 
         &:after {
           position: absolute;

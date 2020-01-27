@@ -1,158 +1,151 @@
 //pagination vertical
 .swiper-pagination-vertical {
-	.swiper-pagination-bullet {
-		display: block;
-		width: 10px;
-		height: 34px;
-		outline: none;
-		opacity: 1;
-		border-radius: 0px;
-		margin-bottom: 10px;
-		cursor: pointer;
-		position: relative;
-		background-color: transparent;
+  .swiper-pagination-bullet {
+    display: block;
+    width: 10px;
+    height: 34px;
+    outline: none;
+    opacity: 1;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
 
-		&:after {
-			position: absolute;
-			content: '';
-			width: 1px;
-			height: 100%;
-			left: 50%;
-			transform: translateX(-50%);
-			background-color: rgba(153, 153, 153, 0.25);
-			@include transition-1;
-		}
+    &:after {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(153, 153, 153, 0.25);
+      @include transition-1;
+    }
 
-		&-active {
-			background-color: transparent;
+    &-active {
+      background-color: transparent;
 
-			&:after {
-				position: absolute;
-				content: '';
-				width: 2px;
-				height: 100%;
-				left: 50%;
-				transform: translateX(-50%);
-				background-color: $red;
-				@include transition-1;
-			}
+      &:after {
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $red;
+        @include transition-1;
+      }
+    }
 
-		}
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-
-	}
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
-
-
 
 //pagination horiszontal
 .swiper-pagination-horizontal {
-	.swiper-pagination-bullet {
-		width: 12px;
-		height: 12px;
-		outline: none;
-		opacity: 1;
-		border-radius: 12px;
-		margin-right: 8px;
-		cursor: pointer;
-		position: relative;
-		background-color: $light;
-		@include transition-1;
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    outline: none;
+    opacity: 1;
+    border-radius: 12px;
+    margin-right: 8px;
+    cursor: pointer;
+    position: relative;
+    background-color: $light;
+    @include transition-1;
 
+    &-active {
+      background-color: $red;
+      @include transition-1;
+    }
 
-		&-active {
-			background-color: $red;
-			@include transition-1;
-		}
-
-		&:last-child {
-			margin-right: 0px;
-		}
-
-	}
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
 }
 
 //navigations buttons
 .slider-button {
-	cursor: pointer;
-	width: 45px;
-	height: 45px;
-	outline: none !important;
-	z-index: 1;
-	background-color: rgba(255, 255, 255, 0.25);
-	padding: 5px;
-	border-radius: 3px;
-	@include transition-1;
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  outline: none !important;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 5px;
+  border-radius: 3px;
+  @include transition-1;
 
-	&-prev {
-		&:after {
-			border: solid #303030;
-			border-width: 0 3px 3px 0;
-			display: inline-block;
-			padding: 7px;
-			position: absolute;
-			content: '';
-			left: 22px;
-			top: 19px;
-			transform: rotate(135deg);
-			@include transition-1;
-		}
+  &__prev {
+    &:after {
+      border: solid #303030;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 7px;
+      position: absolute;
+      content: "";
+      left: 22px;
+      top: 19px;
+      transform: rotate(135deg);
+      @include transition-1;
+    }
 
-		&:hover {
-			background-color: $red;
-			@include transition-1;
+    &:hover {
+      background-color: $red;
+      @include transition-1;
 
-			&:after {
-				@include transition-1;
-				border: solid #fff;
-				border-width: 0 3px 3px 0;
-				display: inline-block;
-				padding: 7px;
-				position: absolute;
-				content: '';
-				left: 22px;
-				top: 19px;
-				transform: rotate(135deg);
-				@include transition-1;
+      &:after {
+        @include transition-1;
+        border: solid #fff;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 7px;
+        position: absolute;
+        content: "";
+        left: 22px;
+        top: 19px;
+        transform: rotate(135deg);
+        @include transition-1;
+      }
+    }
+  }
 
-			}
-		}
-	}
+  &__next {
+    &:after {
+      border: solid #303030;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 7px;
+      position: absolute;
+      content: "";
+      right: 22px;
+      top: 19px;
+      transform: rotate(-45deg);
+      @include transition-1;
+    }
 
-	&-next {
-		&:after {
-			border: solid #303030;
-			border-width: 0 3px 3px 0;
-			display: inline-block;
-			padding: 7px;
-			position: absolute;
-			content: '';
-			right: 22px;
-			top: 19px;
-			transform: rotate(-45deg);
-			@include transition-1;
-		}
+    &:hover {
+      background-color: $red;
+      @include transition-1;
 
-		&:hover {
-			background-color: $red;
-			@include transition-1;
-
-			&:after {
-				@include transition-1;
-				border: solid #fff;
-				border-width: 0 3px 3px 0;
-				display: inline-block;
-				padding: 7px;
-				position: absolute;
-				content: '';
-				right: 22px;
-				top: 19px;
-				transform: rotate(-45deg);
-				@include transition-1;
-			}
-		}
-	}
+      &:after {
+        @include transition-1;
+        border: solid #fff;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 7px;
+        position: absolute;
+        content: "";
+        right: 22px;
+        top: 19px;
+        transform: rotate(-45deg);
+        @include transition-1;
+      }
+    }
+  }
 }

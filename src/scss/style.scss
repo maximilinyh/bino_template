@@ -21,6 +21,8 @@
 //include media scss include
 @import "../../node_modules/include-media/dist/include-media";
 
+//============================================================
+
 //components templates scss
 //var style include
 @import "includes/var";
@@ -31,10 +33,12 @@
 @import "includes/common";
 
 //common style include
-@import "includes/sprite";
-@import "includes/grid";
+//@import "includes/sprite";
+
+//@import "includes/grid";
+
 @import "includes/footer";
-@import "includes/modals";
+//@import "includes/modals";
 @import "includes/slider";
 
 //top-block

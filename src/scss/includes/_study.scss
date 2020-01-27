@@ -1,3 +1,4 @@
+//study styles
 .study {
   background-color: $light;
   padding: 150px 0;
@@ -23,55 +24,43 @@
     }
   }
 
-  &-slider {
-    &-list {
-      &-item {
-        overflow: hidden;
-        padding-bottom: 53px;
-        text-align: center;
-      }
-    }
+  &__item {
+    overflow: hidden;
+    padding-bottom: 53px;
+    text-align: center;
+  }
 
-    &-wrapper {
-      background-color: #fff;
-      box-sizing: border-box;
-      padding: 80px 60px 50px 60px;
-      max-width: 665px;
-      flex: 0 1 100%;
-      min-height: 629px;
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-      @include media("<mobile") {
-        max-width: 100%;
-        padding: 40px 30px;
-      }
-    }
+  &__slider {
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 80px 60px 50px 60px;
+    max-width: 665px;
+    flex: 0 1 100%;
+    min-height: 629px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    margin: 0;
 
-    &-pagination {
-      display: flex;
-      flex: 0 1 auto;
-      justify-content: center;
+    @include media("<mobile") {
+      max-width: 100%;
+      padding: 40px 30px;
     }
   }
 
-  &__icon {
-    width: 90px;
-    height: 90px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: relative;
-    margin: 18px auto 60px auto;
-
-    &:after {
-      position: absolute;
-      content: "";
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: $red;
-      z-index: -1;
-      transform: rotate(-45deg);
+  &__list {
+    .swiper-slide {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      &-active {
+        opacity: 1;
+        transition: opacity 0.5s ease;
+      }
     }
+  }
+
+  &__slide {
+    overflow: hidden;
+    padding-bottom: 53px;
+    text-align: center;
   }
 
   &__title {
@@ -99,5 +88,32 @@
 
   &__text {
     margin-bottom: 48px;
+  }
+
+  &__icon {
+    width: 90px;
+    height: 90px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    margin: 18px auto 60px auto;
+
+    &:after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $red;
+      z-index: -1;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: center;
   }
 }

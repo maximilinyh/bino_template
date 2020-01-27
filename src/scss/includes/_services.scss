@@ -1,7 +1,18 @@
+//services styles
+
 .services {
   &__inner {
     display: flex;
     flex: 0 1 auto;
+  }
+
+  &__title {
+    text-align: right;
+    margin-bottom: 78px;
+
+    @include media("<mobile") {
+      margin-bottom: 40px;
+    }
   }
 
   &__content {
@@ -12,6 +23,7 @@
     height: 768px;
     overflow: hidden;
     position: relative;
+
     @include media("<tab") {
       width: 100%;
       padding: 60px 40px;
@@ -19,30 +31,20 @@
   }
 
   &-content {
-    &__title {
-      text-align: right;
-      margin-bottom: 78px;
-    }
-
-    &-slider {
+    &__slider {
       overflow: hidden;
       height: 100%;
-
-      &-list {
-        &-item {
-        }
-      }
-
-      &-pagination {
-        left: 50px;
-        top: 50%;
-        transform: translateY(-50%);
-        position: absolute;
-        z-index: 1;
-      }
     }
 
-    .services-item {
+    &__pagination {
+      left: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      z-index: 1;
+    }
+
+    &__item {
       position: relative;
       text-align: right;
       margin-bottom: 50px;
@@ -52,35 +54,32 @@
       &:last-child {
         margin-bottom: 0px;
       }
+    }
 
-      &__title {
-        font-family: $second-font-family;
-        color: $red;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 29px;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-      }
+    &__title {
+      font-family: $second-font-family;
+      color: $red;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 29px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
     }
   }
 
   &-image {
     width: 45%;
     height: 768px;
+
     @include media("<tab") {
       display: none;
     }
 
-    &-slider {
-      &-list {
-        &-item {
-          height: 768px;
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center;
-        }
-      }
+    &__item {
+      height: 768px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
     }
   }
 }
