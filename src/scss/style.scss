@@ -1,4 +1,5 @@
-//plugins
+//libs include
+
 //normalize css include
 @import "../../node_modules/normalize.css/normalize.css";
 
@@ -15,17 +16,22 @@
 //swiper css include
 @import "../../node_modules/swiper/css/swiper.css";
 
-//swiper css include
+//nav menu include
 @import "../../node_modules/priority-nav/dist/priority-nav-core.css";
+
+//include scroll animation plugin
+@import "../../node_modules/aos/dist/aos.css";
 
 //include media scss include
 @import "../../node_modules/include-media/dist/include-media";
 
 //============================================================
 
-//components templates scss
+//components templates include
+
 //var style include
 @import "includes/var";
+
 //mixins style include
 @import "includes/mixins";
 
@@ -37,7 +43,6 @@
 
 //@import "includes/grid";
 
-@import "includes/footer";
 //@import "includes/modals";
 @import "includes/slider";
 
@@ -76,6 +81,9 @@
 
 //contact
 @import "includes/contact";
+
+//footer
+@import "includes/footer";
 
 //ux elements
 @import "includes/ux-elements";

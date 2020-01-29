@@ -8,6 +8,8 @@ const glob = require("glob");
 const WebpackProvideGlobalPlugin = require("webpack-provide-global-plugin");
 const ImageminPlugin = require("imagemin-webpack-plugin").default;
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 
 //main directory
 const PATHS = {
@@ -133,6 +135,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new BundleAnalyzerPlugin(),
     new MiniCssExtractPlugin({
       filename: "./css/[name].[contenthash].css",
       optimization: {

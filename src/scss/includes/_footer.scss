@@ -1,2 +1,104 @@
 //footer styles
-.footer {}
+.footer {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background-color: #000000;
+    opacity: 0.7;
+    width: 100%;
+    min-height: 100%;
+  }
+  &__top {
+    padding: 50px 0;
+    min-height: 478px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    .page-frame {
+      flex: 0 1 auto;
+    }
+  }
+  &__head {
+    text-align: center;
+  }
+
+  &__button {
+    text-align: center;
+  }
+  &__bottom {
+    background-color: #202020;
+    padding: 40px 0;
+    .page-frame {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @include media("<mobile") {
+        justify-content: center;
+      }
+    }
+  }
+
+  &__social {
+    margin-right: 20px;
+    ul {
+      display: flex;
+      li {
+        margin-right: 15px;
+        &:last-child {
+          margin-right: 0px;
+        }
+
+        a {
+          color: $main;
+          font-size: 24px;
+          &:hover {
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+}
+
+//button up
+
+.button-up {
+  background-color: $red;
+  width: 53px;
+  height: 53px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  @include transition-1;
+  position: fixed;
+  right: 40px;
+  bottom: -100px;
+  z-index: 100;
+  opacity: 0;
+  @include media("<mobile") {
+    right: 20px;
+  }
+  &.active {
+    bottom: 40px;
+    opacity: 1;
+    @include media("<mobile") {
+      bottom: 20px;
+    }
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  i {
+    color: #fff;
+    font-size: 20px;
+  }
+}

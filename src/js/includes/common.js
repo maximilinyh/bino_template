@@ -45,7 +45,7 @@ function svgInline() {
 svgInline();
 
 //	equalizer plugin for height equal item
-function equalizeHeight() {
+const equalizeHeight = () => {
   let equalItem = $(".equal");
   equalItem.matchHeight({
     byRow: true,

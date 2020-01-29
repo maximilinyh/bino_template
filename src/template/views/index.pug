@@ -17,27 +17,26 @@ html
 		div.wrapper
 			//main content
 			main.main-content
-				section.section.home#home
+				section.section.home#home(data-aos="fade-right")
 					include ../includes/top-block.pug
-				section.section#about
+				section.section#about(data-aos="flip-up")
 					include ../includes/benefits.pug
 					include ../includes/history.pug
 					include ../includes/services.pug
-				section.section#portfolio
+				section.section#portfolio(data-aos="fade-right")
 					include ../includes/works.pug
 					include ../includes/study.pug
 					include ../includes/stats.pug
-				section.section#pricing
+				section.section#pricing(data-aos="fade-left")
 					include ../includes/price.pug
-				section.section#team
+				section.section#team(data-aos="fade-right")
 					include ../includes/team.pug
 					include ../includes/clients.pug
-				section.section#blog
+				section.section#blog(data-aos="flip-up")
 					include ../includes/blog.pug
-				section.section#contact
+				section.section#contact(data-aos="zoom-in")
 					include ../includes/contact.pug
-
-				//end main content
+			//end main content
 			include ../includes/footer.pug
 
 
