@@ -58,7 +58,7 @@
 		"include-media": "^1.4.9",
 		"inputmask": "^5.0.0",
 		"isotope-layout": "^3.0.6",
-		"jquery": "^3.4.1",
+		"jquery": "^3.5.0",
 		"jquery-bridget": "^2.0.1",
 		"jquery-match-height": "^0.7.2",
 		"magnific-popup": "^1.1.0",
